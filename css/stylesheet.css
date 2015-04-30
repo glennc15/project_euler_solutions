@@ -1,4 +1,105 @@
-/*
-script {
-    display: block;
-}*/
+.problem-solution {
+    width: 600PX;
+    margin: 10px auto;
+/*    border: 1px solid black;*/
+}
+
+/* Begin: styling for problem description section */
+.problem-section {
+    background-color: #9BCE7D;
+/*    background-color: #699E87;*/
+
+    border: 1px solid #9BCE7D;
+    margin: 0px 0px;
+    font-family: 'Special Elite', cursive;
+}
+
+.title {
+    color: #796844;
+    margin: 25px 25px;
+}
+
+.problem {  
+    color: #FFFFFF;
+    margin: 20px 35px;
+}
+
+/* End: styling for problem description section */
+
+/* Begin: styling for problem answer section */
+
+
+.answer-section {
+    background-color: #72AC93;
+    border: 1px solid #72AC93;
+    margin: 0px 0px;
+/*    display: inline-block;*/
+    display: inline-flex;
+    padding-top: 10px;
+    
+}
+
+.answer-content {
+    font-family: monofur;
+    padding: 10px; 
+}
+
+.answer-content p {
+    margin-left: 15px;
+}
+
+#answer {
+    width: 150px;
+/*    background-color: orange;*/
+
+}
+
+#code {
+    width: 408px;
+/*    background-color: yellow;*/
+    
+}
+
+.answer-content blockquote {
+    background-color: #699E87;
+    padding: 10px;
+/*    font-family: monofur;*/
+/*    font-family: 'Anonymous Pro', ;*/
+/*    font-family: 'Cutive Mono', ;*/
+
+}
+
+code {
+/*    font-family: 'Anonymous Pro', ;*/
+/*    font-family: 'Cutive Mono', ;*/
+/*    font-family: 'Indie Flower', cursive;*/
+/*    font-family: arial;*/
+}
+
+
+/* End: styling for problem answer section */
+
+
+
+.button {
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    background-color: #BD0102;
+    border: 4px solid #98002F;
+/*    margin: 10px 80px;*/
+    font-weight: bold;
+    font-family: 'Coda', cursive;
+    
+}
+
+.button p {
+    color: #FFFFFF;
+    text-align: center;
+    margin: 4px;
+}
+
+
+
+
+
