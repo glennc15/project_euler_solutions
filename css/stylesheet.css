@@ -19,8 +19,9 @@
     margin: 25px 25px;
 }
 
-.problem {  
-    color: #FFFFFF;
+p.problem {  
+/*    color: #FFFFFF;*/
+    color: #F8DA98;
     margin: 20px 35px;
 }
 
@@ -76,6 +77,9 @@ code {
 /*    font-family: arial;*/
 }
 
+.hide {
+    display: none;
+}
 
 /* End: styling for problem answer section */
 
@@ -90,7 +94,13 @@ code {
 /*    margin: 10px 80px;*/
     font-weight: bold;
     font-family: 'Coda', cursive;
+    cursor: pointer;
     
+}
+
+.button:hover {
+    border-color: #F8DA98;
+/*    border-color: #796844;*/
 }
 
 .button p {
@@ -99,6 +109,10 @@ code {
     margin: 4px;
 }
 
+.blue {
+    color: blue;
+    background-color: blue;
+}
 
 
 
