@@ -8,7 +8,7 @@ body {
 }
 
 .problem-solution {
-    width: 600PX;
+    width: 900PX;
     margin: 30px auto;
 /*    border: 1px solid black;*/
 }
@@ -73,7 +73,7 @@ p.problem {
 }
 
 #code {
-    width: 408px;
+    width: 708px;
 /*    background-color: yellow;*/
     
 }
