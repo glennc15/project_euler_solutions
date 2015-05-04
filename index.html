@@ -79,38 +79,28 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
             <div class="answer-section">
                 <div class='answer-content' id='answer'>
                     <div class='button' id='show-answer'><p>Show Answer</p></div>
-                    <div class='content hide'><p>233168</p></div>
+                    <div class='content hide'><p>4613732</p></div>
                 </div>
                 <div class='answer-content' id='code'>
                     <div class='button' id='show-code'><p>Show Code</p></div>
                     <div class='content hide'><blockquote><pre><code>
-var multiples = function (number) {
+var problem2 = function(number) {
+    
+    var fibPrevious = 1;
+    var fibCurrent = 2;
+    var fibNext = 0;
+    var evenSum = 2;
 
-var sum = 0;
-    var multiple3 = 0;
-    var multiple5 = 0;
-    for (var i=1; i&lt;number; i++) {
-        if (i%3 == 0) {
-            multiple3 = i;
-        }
+    while (fibCurrent &lt;= number) {
+        fibNext = fibCurrent + fibPrevious;
+        fibPrevious = fibCurrent;
+        fibCurrent = fibNext;
+        if (fibCurrent &lt;= number &amp;&amp; fibCurrent%2 === 0) {
 
-        if (i%5 == 0) {
-            multiple5 = i;
+            evenSum += fibCurrent;
         }
-
-        if (multiple3 === multiple5) {
-            sum += multiple3;
-        }
-        else {
-            sum += multiple3;
-            sum += multiple5;
-        }
-
-        multiple3 = 0;
-        multiple5 = 0;
     }
-
-    return sum;
+    return evenSum;
 }
                             </code></pre></blockquote></div>
                 </div>
@@ -130,38 +120,38 @@ What is the largest prime factor of the number 600851475143 ?</p>
             <div class="answer-section">
                 <div class='answer-content' id='answer'>
                     <div class='button' id='show-answer'><p>Show Answer</p></div>
-                    <div class='content hide'><p>233168</p></div>
+                    <div class='content hide'><p>6857</p></div>
                 </div>
                 <div class='answer-content' id='code'>
                     <div class='button' id='show-code'><p>Show Code</p></div>
                     <div class='content hide'><blockquote><pre><code>
-var multiples = function (number) {
-
-var sum = 0;
-    var multiple3 = 0;
-    var multiple5 = 0;
-    for (var i=1; i&lt;number; i++) {
-        if (i%3 == 0) {
-            multiple3 = i;
-        }
-
-        if (i%5 == 0) {
-            multiple5 = i;
-        }
-
-        if (multiple3 === multiple5) {
-            sum += multiple3;
-        }
-        else {
-            sum += multiple3;
-            sum += multiple5;
-        }
-
-        multiple3 = 0;
-        multiple5 = 0;
+// Source: 
+// http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+var largestPrimeFactor = function(number) {
+    // create a boolean array for every consecutive integer up
+    // to and including sqrt(number).
+    var cutoffInteger = Math.ceil(Math.sqrt(number));
+    var sieveArray = [];
+    for (var idx = 0; idx &lt;= cutoffInteger; idx++) {
+        sieveArray.push(true);
     }
-
-    return sum;
+    
+    // Check all itegers between 2 &lt;= integer &lt;= cutoffInteger for prime.
+    for (var integer = 2; integer &lt;= cutoffInteger; integer++){
+        if (sieveArray[integer]) {
+            for (var idxSkip = 2*integer; idxSkip &lt;= cutoffInteger; 
+                idxSkip += integer) {
+                sieveArray[idxSkip] = false;
+            }
+        }
+    }
+        
+    // return the largest prive factor in sieveArray.
+    for (var idx = cutoffInteger; idx &gt;= 2; idx--) {    
+        if (sieveArray[idx] &amp;&amp; number%idx === 0){
+            return idx;
+        }
+    }
 }
                             </code></pre></blockquote></div>
                 </div>
