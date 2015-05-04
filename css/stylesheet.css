@@ -7,6 +7,10 @@ body {
 
 }
 
+#title {
+    color: #00000;
+}
+
 .problem-solution {
     width: 900PX;
     margin: 30px auto;
